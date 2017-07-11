@@ -1,0 +1,27 @@
+dist: trusty
+sudo: false
+language: java
+
+env:
+    global:
+        - GRADLE_VERSION='4.0'
+        - GRADLE_DISTRIBUTION_URL="https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip"
+        - TERM=dumb
+jdk:
+    - oraclejdk8
+    - openjdk8
+before_install:
+    - (
+           cd "${HOME}"
+        && curl -sSLO "${GRADLE_DISTRIBUTION_URL}"
+        && unzip -q $(basename "${GRADLE_DISTRIBUTION_URL}")
+        && mv "gradle-${GRADLE_VERSION}" "gradle"
+      )
+    - export PATH="${HOME}/gradle/bin:${PATH}"
+    - hash -r
+    - gradle --version
+script:
+    - gradle build
+
+notifications:
+    email: false
