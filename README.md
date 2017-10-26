@@ -1,7 +1,7 @@
 RxBroadcast.kt
 ==============
 
-RxBroadcast.kt is a Kotlin wrapper/companion project for [RxBroadcast](https://github.com/RxBroadcast/RxBroadcast), a small distributed event library for the JVM.
+RxBroadcast.kt is a Kotlin wrapper project for [RxBroadcast](https://github.com/RxBroadcast/RxBroadcast), a small distributed event library for the JVM.
 
 Gradle dependency:
 
