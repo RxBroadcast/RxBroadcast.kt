@@ -10,8 +10,8 @@ plugins {
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
-    compile("io.reactivex:rxjava:1.3.0")
-    compile("rxbroadcast:rxbroadcast:1.2.0")
+    compile("io.reactivex:rxjava:1.3.3")
+    compile("rxbroadcast:rxbroadcast:2.0.0")
 }
 
 tasks.withType<KotlinCompile> {
