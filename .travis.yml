@@ -11,15 +11,9 @@ jdk:
     - oraclejdk8
     - openjdk8
 before_install:
-    - (
-           cd "${HOME}"
-        && curl -sSLO "${GRADLE_DISTRIBUTION_URL}"
-        && unzip -q $(basename "${GRADLE_DISTRIBUTION_URL}")
-        && mv "gradle-${GRADLE_VERSION}" "gradle"
-      )
-    - export PATH="${HOME}/gradle/bin:${PATH}"
-    - hash -r
-    - gradle --version
+    - ( cd $HOME && curl -LO "https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip" )
+    - ( cd $HOME && unzip -q gradle-$GRADLE_VERSION-bin.zip && rm gradle-$GRADLE_VERSION-bin.zip )
+    - export PATH=$HOME/gradle-$GRADLE_VERSION/bin:$PATH && hash -r && gradle --version
 script:
     - gradle build
 
