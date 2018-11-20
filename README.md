@@ -1,4 +1,4 @@
-RxBroadcast.kt
+RxBroadcast.kt &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 ==============
 
 RxBroadcast.kt is a Kotlin wrapper project for [RxBroadcast](https://github.com/RxBroadcast/RxBroadcast), a small distributed event library for the JVM.
